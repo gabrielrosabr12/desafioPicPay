@@ -2,6 +2,8 @@ package com.application.picpay.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 @Entity
 @Table(name = "tb_wallet_type")
 public class WalletType {
@@ -15,8 +17,8 @@ public class WalletType {
     public WalletType() {
     }
 
-    public WalletType(Long id, String description) {
-        this.id = id; // Atribui o ID recebido no Enum
+    public WalletType(Long id,String description) {
+        this.id = id;
         this.description = description;
     }
     public Long getId() {
@@ -51,5 +53,18 @@ public class WalletType {
         public WalletType get(){
             return new WalletType(id,description);
         }
+
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        WalletType that = (WalletType) o;
+        return Objects.equals(id, that.id) && Objects.equals(description, that.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, description);
     }
 }
