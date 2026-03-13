@@ -136,6 +136,8 @@ git clone https://github.com/gabrielrosabr12/desafioPicPay.git
 
 <h2 id="reference">Reference</h2>
 
+Link to the challenge rules and requirements. [Challenge PicPay](https://github.com/PicPay/picpay-desafio-backend?tab=readme-ov-file#materiais-%C3%BAteis)
+
 
 This project was created by studying the Build Run Tech video. [@buildrun-tech](https://github.com/buildrun-tech)
 
